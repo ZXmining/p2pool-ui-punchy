@@ -240,6 +240,9 @@ $(document).on('update_miners', function(e, eventInfo) {
     }
 
     $('#share_difficulty').text(parseFloat(global_stats.min_difficulty).toFixed(2));
+	
+	// Add Efficiency
+    $('#efficiency').text(parseFloat(local_stats.efficiency * 100).toFixed(2) + '%');// Multiply by 100 and round to 2 decimal place.
 
     $('#block_value')
         .text(parseFloat(local_stats.block_value).toFixed(8))
